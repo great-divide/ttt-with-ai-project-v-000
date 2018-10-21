@@ -33,8 +33,7 @@ class Board
   end
   
   def turn_count
-    array = @cells.delete_if { |n| n == "" || n == " " }
-    array.length
+    @cells.count { |n| n != " " }
   end
   
   def taken?(position)
